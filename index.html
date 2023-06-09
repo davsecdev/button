@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #3498db;
+  color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.button:active {
+  background-color: #1f618d;
+}
+</style>
+</head>
+<body>
+<button class="button" onclick="handleButtonClick()">Download</button>
+
+<script>
+var clickCount = 0;
+
+function handleButtonClick() {
+  clickCount++;
+  
+  if (clickCount === 1) {
+    window.open('https://www.davsec.my.id', '_blank'); // Ganti dengan URL halaman tujuan
+  } else if (clickCount === 2) {
+    window.location.href = 'https://www.example.com/file-download.zip'; // Ganti dengan URL file download
+  }
+}
+</script>
+</body>
+</html>
